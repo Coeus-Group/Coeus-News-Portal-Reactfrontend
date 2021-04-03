@@ -1,0 +1,39 @@
+.App {
+    text-align: center;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.form-signin button {
+    background-color: #4c77af;
+    color:whitesmoke;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    border-radius: 12px;
+    font-size: 16px
+}
+
+button:hover {
+    opacity: 0.8;
+}
