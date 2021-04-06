@@ -1,6 +1,7 @@
 import React from 'react'
 import './NewArticles.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Form, Col, Row, Button } from "react-bootstrap";
 
 function NewArticles() {
     return (
@@ -8,78 +9,59 @@ function NewArticles() {
             <main className="article-main">
                 <div className="container-fluid">
                     <form className="form-article">
-                        <div className="container-newarticle">
-                            <form formAction="action_page.php">
-                                <div className="row-newarticle">
-                                    <div className="col-25-newarticle">
-                                        <label htmlFor="title">Article Title</label>
-                                    </div>
-                                    <div className="col-75-newarticle">
-                                        <input type="text" id="title" name="articletitle" placeholder="Your title..">
-                                        </input>
-                                    </div>
-                                </div>
-                                {/* <div className="row-newarticle">
-                                    <div className="col-25-newarticle">
-                                        <label htmlFor="notes">Article Notes</label>
-                                    </div>
-                                    <div className="col-75-newarticle">
-                                        <textarea id="notes" name="notes" placeholder="Comments.."
-                                            style="height:200px" />
-                                    </div>
-                                </div> */}
-                                <div className="row-newarticle">
-                                    <div className="col-25-newarticle">
-                                        <label htmlFor="articlecategory">Article Category</label>
-                                    </div>
-                                    <div className="col-75-newarticle">
-                                        <select id="articlecategory" name="articlecategory">
-                                            <option value="politics">Politics</option>
-                                            <option value="education">Education</option>
-                                            <option value="finance">Finance</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="row-newarticle">
-                                    <div className="col-25-newarticle">
-                                        <label htmlFor="tags">Article Tags</label>
-                                    </div>
-                                    <div className="col-75-newarticle">
-                                        <input type="text" id="tags" name="articletags" placeholder="Your Tags..">
-                                        </input>
-                                    </div>
-                                </div>
-                                <div className="row-newarticle">
-                                    <div className="col-25-newarticle">
-                                        <label htmlFor="notes">Article Text Content</label>
-                                    </div>
-                                    <div className="col-75-newarticle">
-                                        <input type="file" className="form-file-txt">
-                                        </input>
-                                    </div>
-                                </div>
-                                <div className="row-newarticle">
-                                    <div className="col-25-newarticle">
-                                        <label htmlFor="notes">Article Media Content</label>
-                                    </div>
-                                    <div className="col-75-newarticle">
-                                        <input type="file" className="form-file-txt">
-                                        </input>
-                                    </div>
-                                </div>
-                                <div className="row-newarticle">
-                                    <div className="form-newarticle">
-                                        <button className="btn-submit btn-sm btn-primary" type="submit"
-                                            formAction="dashboard.html">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        <Form>
+                            <Form.Group as={Row} controlId="formPlaintextPassword">
+                                <Form.Label column sm="2">
+                                    Article Title
+                                </Form.Label>
+                                <Col sm="10">
+                                    <Form.Control type="Article Title" placeholder="Article Title" />
+                                </Col>
+                            </Form.Group>
+                            <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+                                <Form.Label column sm="2">Article Content
+                                </Form.Label>
+                                <Col sm="10">
+                                    <Form.Control as="textarea" rows={3} />
+                                </Col>
+                            </Form.Group>
+                            <Form.Group as={Row} controlId="exampleForm.SelectCustom">
+                                <Form.Label column sm="2">
+                                    Article Category
+                                    </Form.Label>
+                                <Col sm="10">
+                                    <Form.Control as="select" custom>
+                                        <option>Politics</option>
+                                        <option>Education</option>
+                                        <option>Finance</option>
+                                    </Form.Control>
+                                </Col>
+                            </Form.Group>
+                            <Form.Group as={Row} controlId="exampleFormControlFile1">
+                                <Form.Label column sm="2">
+                                    Article Text Content
+                                    </Form.Label>
+                                <Col sm="10">
+                                    <Form.File id="exampleFormControlFile1" />
+                                </Col>
+                            </Form.Group>
+                            <Form.Group as={Row} controlId="exampleFormControlFile1">
+                                <Form.Label column sm="2">
+                                    Article Media Content
+                                    </Form.Label>
+                                <Col sm="10">
+                                    <Form.File id="exampleFormControlFile1" />
+                                </Col>
+                            </Form.Group>
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
+                        </Form>
                     </form>
                 </div>
             </main>
         </div>
-    );
+    )
 }
 
 export default NewArticles;
