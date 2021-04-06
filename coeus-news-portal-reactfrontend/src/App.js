@@ -8,7 +8,6 @@ import NewArticles from './components/NewArticles/NewArticles';
 import Footer from './components/Footer/Footer';
 import { Navbar, Nav } from "react-bootstrap";
 
-
 const App = () => {
   return (
     <Router>
