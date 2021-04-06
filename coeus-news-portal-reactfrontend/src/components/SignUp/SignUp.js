@@ -1,6 +1,6 @@
 import './SignUp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Form, Col, Button } from "react-bootstrap";
 
 
 function SignUp() {
@@ -10,31 +10,33 @@ function SignUp() {
                 <form>
                     <h2 className="h3 mb-3 fw-normal" >Please Sign Up</h2>
                     <div className="form-floating">
-                        <input type="First Name" className="form-control" id="floatingInput" placeholder="First Name" />
+                        <Form>
+                            <Col>
+                                <Form.Control placeholder="First Name" />
+                            </Col>
+                            <Col>
+                                <Form.Control placeholder="Last Name" />
+                            </Col>
+                            <Col>
+                                <Form.Control placeholder="Email" />
+                            </Col>
+                            <Col>
+                                <Form.Control
+                                    type="password"
+                                    placeholder="Password"
+                                />
+                            </Col>
+                            <Col>
+                                <Form.Control type="password" placeholder=" Confirm Password" />
+                            </Col>
+                        </Form>
+                        <Button variant="primary" type="submit">
+                            Sign Up
+                        </Button>
+                        <p className="forgot-password text-center">
+                            Already registered <a href="/">log in?</a>
+                        </p>
                     </div>
-                    <div className="form-floating">
-                        <input type="Last Name " className="form-control" id="floatingInput" placeholder="Last Name" />
-                    </div>
-                    <div className="form-floating">
-                        <input type="email" className="form-control" id="floatingInput" placeholder="Email Address" />
-                    </div>
-                    <div className="form-floating">
-                        <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-                    </div>
-                    <div className="form-floating">
-                        <input type=" Confirm password" className="form-control" id="floatingPassword" placeholder="Confirm Password" />
-                    </div>
-                    <div className="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me" /> I accept the terms of Use and privacy policy .
-                        </label>
-                    </div>
-                    <div className="form-group">
-                        <button className="w-100 btn btn-lg btn-primary" type="submit" >Sign Up </button>
-                    </div>
-                    <p className="forgot-password text-center">
-                        Already registered <a href="/">log in?</a>
-                    </p>
                 </form>
             </main>
         </div>

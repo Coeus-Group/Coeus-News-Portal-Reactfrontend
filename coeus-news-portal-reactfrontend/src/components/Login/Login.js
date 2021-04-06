@@ -1,5 +1,6 @@
 import './Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form, Col, Button } from "react-bootstrap";
 
 function Login() {
     return (
@@ -7,20 +8,23 @@ function Login() {
             <main className="form-signin">
                 <form>
                     <h2 className="h3 mb-3 fw-normal" >Please Login</h2>
-                    <div className="form-floating">
-                        <input type="email" className="form-control" id="floatingInput" placeholder="Email address" />
-                    </div>
-                    <div className="form-floating">
-                        <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-                    </div>
-                    <div className="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me" /> Remember me
-                        </label>
-                    </div>
-                    <div className="form-group">
-                        <button className="w-100 btn btn-lg btn-primary" type="submit" >Login</button>
-                    </div>
+                    <Form>
+                        <Col>
+                            <Form.Control placeholder="Email" />
+                        </Col>
+                        <Col>
+                            <Form.Control
+                                type="password"
+                                placeholder="Password"
+                            />
+                        </Col>
+                    </Form>
+                    <Form.Group id="formGridCheckbox">
+                        <Form.Check type="checkbox" label="Rememeber Me" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Login
+                    </Button>
                 </form>
             </main>
         </div>

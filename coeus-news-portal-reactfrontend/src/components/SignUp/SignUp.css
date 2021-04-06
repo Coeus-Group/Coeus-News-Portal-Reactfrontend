@@ -1,59 +1,21 @@
 .App {
     text-align: center;
 }
-
-.form-signin input[type="First Name"] {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.form-signin input[type="Last Name"] {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.form-signin input[type="Email"] {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.form-signin input[type="Confirm Password"] {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.form-signin input[type="password"] {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-.form-signin input[type="checkbox"] {
-    margin-top: 30px;
-    
-}
-
-.form-signin {
+.form-control {
+    margin-bottom: 30px;
+    display: block;
     width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
-    margin-top: 60px;
-    padding: 20px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .form-signin button {
