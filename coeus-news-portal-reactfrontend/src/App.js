@@ -6,52 +6,41 @@ import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import NewArticles from './components/NewArticles/NewArticles';
 import Footer from './components/Footer/Footer';
+import { Navbar, Nav } from "react-bootstrap";
 
-
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <header>
-          <div className="App">
-            <Router>
-              <main>
-                <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                  <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                      <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <a className="navbar-brand">Coeus News Portal</a>
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
-                      <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                        <li className="nav-link active">
-                          <Link to="/Home">Home</Link>
-                        </li>
-                        <li className="nav-link">
-                          <Link to={"/Dashboard"}>Dashboard</Link>
-                        </li>
-                        <li className="nav-link">
-                          <Link to="/NewArticles">Create New Articles</Link>
-                        </li>
-                      </ul>
-                      <button className="btn-dbpg btn-sm" type="submit">Logout</button>
-                    </div>
-                  </div>
-                </nav>
-                <Switch>
-                  <Route path="/Home" component={Home} />
-                  <Route path="/Dashboard" component={Dashboard} />
-                  <Route path="/NewArticles" component={NewArticles} />
-                </Switch>
-              </main>
-            </Router>
-          </div>
-        </header>
-        <Footer />
-      </Router>
-    );
-  }
+const App = () => {
+  return (
+    <Router>
+      <header>
+        <div className="App">
+          <Router>
+            <main>
+              <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+                <Navbar.Brand href="#home">Coeus News Portal</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                  <Nav className="mr-auto">
+                    <Nav.Link ><Link to={"/Home"}>Home</Link></Nav.Link>
+                    <Nav.Link><Link to={"/Dashboard"}>Dashboard</Link></Nav.Link>
+                    <Nav.Link><Link to="/NewArticles">Create New Articles</Link></Nav.Link>
+                  </Nav>
+                  <Nav>
+                    <Nav.Link href="#deets">Login</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+              <Switch>
+                <Route path="/Home" component={Home} />
+                <Route path="/Dashboard" component={Dashboard} />
+                <Route path="/NewArticles" component={NewArticles} />
+              </Switch>
+            </main>
+          </Router>
+        </div>
+      </header>
+      <Footer />
+    </Router>
+  );
 }
 
 
