@@ -19,10 +19,17 @@ function NewArticles() {
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-                                <Form.Label column sm="2">Article Content
+                                <Form.Label column sm="2">Article Headlines
                                 </Form.Label>
                                 <Col sm="10">
                                     <Form.Control as="textarea" rows={3} />
+                                </Col>
+                            </Form.Group>
+                            <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
+                                <Form.Label column sm="2">Article Content
+                                </Form.Label>
+                                <Col sm="10">
+                                    <Form.Control as="textarea" rows={10} />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} controlId="exampleForm.SelectCustom">
@@ -37,12 +44,17 @@ function NewArticles() {
                                     </Form.Control>
                                 </Col>
                             </Form.Group>
-                            <Form.Group as={Row} controlId="exampleFormControlFile1">
+                            <Form.Group as={Row} controlId="exampleForm.SelectCustom">
                                 <Form.Label column sm="2">
-                                    Article Text Content
+                                    Article Location
                                     </Form.Label>
                                 <Col sm="10">
-                                    <Form.File id="exampleFormControlFile1" />
+                                    <Form.Control as="select" custom>
+                                        <option>England</option>
+                                        <option>Scotland</option>
+                                        <option>Wales</option>
+                                        <option>Northern Ireland</option>
+                                    </Form.Control>
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} controlId="exampleFormControlFile1">
