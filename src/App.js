@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import NewArticles from './components/NewArticles/NewArticles';
+import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import { Navbar, Nav } from "react-bootstrap";
 
@@ -25,7 +26,7 @@ const App = () => {
                     <Nav.Link><Link to="/NewArticles">Create New Articles</Link></Nav.Link>
                   </Nav>
                   <Nav>
-                    <Nav.Link href="#deets">Login</Nav.Link>
+                    <Nav.Link><Link to="/Login">Login</Link></Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>
@@ -33,6 +34,7 @@ const App = () => {
                 <Route path="/Home" component={Home} />
                 <Route path="/Dashboard" component={Dashboard} />
                 <Route path="/NewArticles" component={NewArticles} />
+                <Route path="/Login" component={Login} />
               </Switch>
             </main>
           </Router>
