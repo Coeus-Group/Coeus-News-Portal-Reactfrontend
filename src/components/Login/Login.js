@@ -35,7 +35,7 @@ export default function SignIn() {
             <CssBaseline />
             <div className={classes.paper}>
                 <Typography component="h1" variant="h5">
-                    Sign in
+                    Please Login
         </Typography>
                 <form className={classes.form} noValidate>
                     <TextField
@@ -71,7 +71,7 @@ export default function SignIn() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign In
+                        Login 
           </Button>
                     <Grid container>
                         <Grid item>
