@@ -24,8 +24,9 @@ const Homepage = () => {
       {!isSignedIn ? (
         <div className="login__message">
           <h2>📗</h2>
-          <h1>Coues News Portal</h1>
-          <p>
+          
+          <h1 class="typewriter-text">Coues News Portal</h1>
+          <p class="typewriter-text">
    ]        Online resource for reading blogs. Sign
             up and start reading!.
           </p>
