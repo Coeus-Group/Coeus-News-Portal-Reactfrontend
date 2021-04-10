@@ -31,3 +31,22 @@ body{
 .card-img-top:hover{
     transform: scale(1.8);
 }
+@media (min-width:800px){
+.newscards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.newscard{
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  color: #333;
+  flex-basis: width;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+}
