@@ -1,4 +1,5 @@
 import React from "react";
+import ParticlesBg from "particles-bg";
 import GoogleLogin from "react-google-login";
 import "../styling/home.css"
 import { useDispatch, useSelector } from "react-redux";
@@ -25,12 +26,14 @@ const Landingpage = () => {
 
   return (
     <div className="home__page" style={{ display: isSignedIn ? "none" : "" }}>
+        <ParticlesBg type="random" bg={true}/>
       {!isSignedIn ? (
         <div className="login__message ">
           <h2>📰</h2>
-          
-          <h1 >Coues News Portal</h1>
-          <p  >Online resource for reading blogs. Signup and start reading!</p>
+                <h1 className="typewriter-text" >Coues News Portal</h1>
+                <p  >Online resource for reading blogs. Signup and start reading!</p>
+                
+            
           <GoogleLogin
             clientId="372908462482-gicrn8r4bg3t2j0fs9vt5av62agmvlq8.apps.googleusercontent.com"
             render={(renderProps) => (

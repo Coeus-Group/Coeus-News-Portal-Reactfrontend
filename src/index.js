@@ -5,13 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import store from "./app/store";
+import ParticlesBg from "particles-bg";
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
+    <ParticlesBg type="circle" bg={true} />
   </Provider>,
   document.getElementById("root")
 );
+
+
 
 
 // If you want to start measuring performance in your app, pass a function
