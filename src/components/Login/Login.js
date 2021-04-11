@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import { useForm } from "react-hook-form";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -30,6 +30,16 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
     const classes = useStyles();
 
+    const {
+        register,
+        handleSubmit,
+
+        formState: { errors }
+    } = useForm();
+
+    const onSubmit = (data) => {
+        alert(JSON.stringify(data));
+    };
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -37,19 +47,32 @@ export default function SignIn() {
                 <Typography component="h1" variant="h5">
                     Please Login
         </Typography>
-                <form className={classes.form} noValidate>
-                    <TextField
+
+                {/*<form className={classes.form} noValidate>*/}
+                <form onSubmit={handleSubmit(onSubmit)}>
+
+                    <TextField {...register("Email", {
+                        required: true,
+
+                        pattern: /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+                    })}
                         variant="outlined"
                         margin="normal"
                         required
                         fullWidth
-                        id="email"
-                        label="Email Address"
-                        name="email"
-                        autoComplete="email"
+                        id="Email"
+                        label="Email"
+                        name="Email"
+                        autoComplete="Email"
                         autoFocus
                     />
-                    <TextField
+                    {errors?.Email?.type === "required" && <p>Email field is required</p>}
+
+                    <TextField  {...register("Password", {
+                        required: true,
+                        maxLength: 6,
+                        pattern: /^[A-Za-z]+$/i
+                    })}
                         variant="outlined"
                         margin="normal"
                         required
@@ -60,6 +83,11 @@ export default function SignIn() {
                         id="password"
                         autoComplete="current-password"
                     />
+
+                    {errors?.Password?.type === "required" && <p>Password field is required</p>}
+                    {errors?.Password?.type === "maxLength" && (
+                        <p>Password cannot exceed 6 characters</p>
+                    )}
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
                         label="Remember me"
@@ -71,8 +99,8 @@ export default function SignIn() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Login 
-          </Button>
+                        Login
+                        </Button>
                     <Grid container>
                         <Grid item>
                             <Link href="#" variant="body2">
