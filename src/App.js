@@ -6,6 +6,7 @@ import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navbar, Nav } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { selectSignedIn } from "./feature/userHandle";
+import "./styling/app.css";
 
 
 
