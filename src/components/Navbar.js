@@ -12,6 +12,24 @@ import {
 }from "../feature/userHandle";
 
 const Navbar = () => {
+
+  const [inputValue, setInputValue] = useState("london");
+  const isSignedIn = useSelector(selectSignedIn);
+  const userData = useSelector(selectUserData);
+
+  const dispatch = useDispatch();
+
+  const logout = (response) => {
+    dispatch(setSignedIn(false));
+    dispatch(setUserData(null));
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(setInput(inputValue));
+  };
+
+
     return (
         <div>
             
