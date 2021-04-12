@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { selectSignedIn } from "./feature/userHandle";
 import Navbar from "./Components/Navbar";
 import "./styling/app.css";
+import Articles from './Components/Articles';
 
 
 
@@ -17,6 +18,8 @@ const App = () => {
       <div className="app">
         <Navbar />
         <Landingpage />
+        {isSignedIn && <Articles/>}
+
       </div>
     // <Router>
     //   <header>
