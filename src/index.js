@@ -10,7 +10,7 @@ import ParticlesBg from "particles-bg";
 ReactDOM.render(
   <Provider store={store}>
     <App />
-    <ParticlesBg type="circle" bg={true} />
+    {/* <ParticlesBg type="circle" bg={true} /> */}
   </Provider>,
   document.getElementById("root")
 );
