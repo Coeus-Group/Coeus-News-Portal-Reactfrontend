@@ -29,20 +29,21 @@ const Landingpage = () => {
 
   return (
     <div className="home__page" style={{ display: isSignedIn ? "none" : "" }}>
-        <ParticlesBg type="random" bg={true}/>
+        <ParticlesBg type="cobweb" bg={true}/>
       {!isSignedIn ? (
         <div className="login__message ">
           <h2>📰</h2>
                 <h1 className="typewriter-text" >Coues News Portal</h1>
-                <p>Online resource for reading blogs. Signup and start reading!</p>
+                {/* <p>Online resource for reading blogs. Signup and start reading!</p> */}
 
  
-              <Typewriter
+              <Typewriter 
                 options={{
                   strings: ['Coues News', 'Portal'],
-                  strings: ['Online resource for reading blogs. Signup and start reading', 'Signin😋'],
+                  strings: ['Online resource for reading blogs. Signup and start reading!', 'Signin😋'],
                   autoStart: true,
                   loop: true,
+                  
                 }}
               /> 
             
