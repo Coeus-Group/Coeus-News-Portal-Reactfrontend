@@ -14,6 +14,7 @@ import "./styling/app.css";
 const App = () => {
   return (
       <div className="app">
+        <Navbar />
         <Landingpage />
       </div>
     // <Router>
