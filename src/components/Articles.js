@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import { selectUserInput, setBlogData } from '../feature/userHandle';
+import {useDispatch, useSelector} from "react-redux";
+
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
@@ -12,7 +14,7 @@ const Articles = () => {
 
     useEffect(() => {
         axios
-         .get(blog_url)
+         .get(articles_url)
          .then ((response) => {
             dispatch(setBlogData(response.data));
             setBlogs(response.data);
