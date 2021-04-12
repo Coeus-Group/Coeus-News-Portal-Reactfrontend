@@ -29,7 +29,7 @@ const Articles = () => {
     return (
         <div className="blog-page">
             <h1 className="blog-page-header">Articles</h1>
-            
+             {loading ? <h1 classname="loading">Loading...♻️</h1>}
         </div>
     );
 };
