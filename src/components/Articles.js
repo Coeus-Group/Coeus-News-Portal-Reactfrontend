@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { selectUserInput } from '../feature/userHandle';
+import { selectUserInput, setBlogData } from '../feature/userHandle';
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
@@ -11,10 +11,13 @@ const Articles = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        effect
-        return () => {
-            cleanup
-        }
+        axios
+         .get(blog_url)
+         .then ((response) => {
+            dispatch(setBlogData(response.data));
+            setBlogs(response.data);
+            setLoading(false);
+        })
     }, [input])
 
     return (
