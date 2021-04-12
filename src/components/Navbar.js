@@ -30,11 +30,26 @@ const Navbar = () => {
   };
 
 
-    return (
-        <div>
-            
+  return (
+    <div className="navbar">
+      <h1 className="navbar__header">Coeus News Portal 📰</h1>
+      {isSignedIn && (
+        <div className="blog__search">
+          <input
+            className="search"
+            placeholder="Search for a blog"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+          <button className="submit" onClick={handleClick}>
+            Search
+          </button>
         </div>
-    )
-}
+      )}
 
-export default Navbar
+      
+    </div>
+  );
+};
+
+export default Navbar;
