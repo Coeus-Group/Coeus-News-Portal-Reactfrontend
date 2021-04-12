@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 .home__page {
   height: 87vh;
   display: flex;
@@ -64,9 +65,8 @@
 
 }
 
-.typewriter-p{
-  font-size: 50px;
- 
-    
+.Typewriter__wrapper{
+  font-size: 20px;
+  font-family: "Anonymous Pro";     
 }
 
