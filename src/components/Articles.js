@@ -22,7 +22,7 @@ const Articles = () => {
             console.log(error);
 
         });
-    }, [input])
+    }, [searchInput]);
 
     return (
         <div className="blog-page">
