@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import Landingpage from "./Components/Landingpage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navbar, Nav } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { selectSignedIn } from "./feature/userHandle";
 import Navbar from "./Components/Navbar";

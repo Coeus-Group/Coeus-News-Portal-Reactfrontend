@@ -1,5 +1,5 @@
-import React from 'react'
 import { Avatar } from "@material-ui/core";
+import "../styling/navbar.css"
 import React, { useState } from "react";
 import { GoogleLogout } from "react-google-login";
 import { useDispatch, useSelector } from "react-redux";
@@ -63,14 +63,14 @@ const Navbar = () => {
                                 disabled={renderProps.disabled}
                                 className="logout__button"
                             >
-                                Logout 🔴
+                                Logout 😞
                             </button>
                         )}
                         onLogoutSuccess={logout}
                     />
                 </div>
             ) : (
-                <h1 className="notSignedIn">User not available 😞</h1>
+                <h1 className="notSignedIn">User unavailable 🔴 </h1>
             )}
         </div>
     );
