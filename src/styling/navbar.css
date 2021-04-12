@@ -24,3 +24,9 @@
     cursor: pointer;
     border: 2px solid rgb(0, 255, 234);
   }
+
+  .signedIn {
+    font-size: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
