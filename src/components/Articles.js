@@ -10,6 +10,13 @@ const Articles = () => {
 
     const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        effect
+        return () => {
+            cleanup
+        }
+    }, [input])
+
     return (
         <div className="blog-page">
             <h1 className="blog-page-header">Articles</h1>
