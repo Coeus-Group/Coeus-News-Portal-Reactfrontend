@@ -43,3 +43,18 @@
     font-weight: 500;
     cursor: pointer;
   }
+
+  .notSignedIn {
+    font-size: 15px;
+  }
+  
+  .blog__search {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+    margin: 0px 70px;
+    justify-content: space-between;
+    background: rgb(39, 39, 39);
+    border-radius: 5px;
+  }
