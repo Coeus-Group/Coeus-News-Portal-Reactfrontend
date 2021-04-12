@@ -8,7 +8,7 @@ const Articles = () => {
     const dispatch = useDispatch();
     const [blogs,setBlogs] = useState();
 
-    
+    const [loading, setLoading] = useState(true);
 
     return (
         <div className="blog-page">
