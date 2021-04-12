@@ -12,6 +12,7 @@ import "./styling/app.css";
 
 
 const App = () => {
+  const isSignedIn = useSelector(selectSignedIn);
   return (
       <div className="app">
         <Navbar />
