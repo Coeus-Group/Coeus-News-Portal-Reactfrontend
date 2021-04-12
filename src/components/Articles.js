@@ -32,7 +32,17 @@ const Articles = () => {
              {loading ? <h1 classname="loading">Loading...♻️</h1>}
         </div className="articles">
         {blogs?.?articles?.map(blog => (
-            <a></a>
+            <a className="blog" target="_blank" href={blog.url}>
+                <img src={blog.image}/>
+                <div>
+                    <h3 className="sourceName">
+                        <span>{blog.source.name}</span>
+                        <span>{blog.publisherAt }</span>
+                    </h3>
+                    <h1>{blog.title}</h1>
+                    <h1>{blog.title}</h1>
+                </div>
+            </a>
 
         )
             )
