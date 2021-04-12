@@ -18,6 +18,10 @@ const Articles = () => {
             setBlogs(response.data);
             setLoading(false);
         })
+        .catch((error) => {
+            console.log(error);
+
+        });
     }, [input])
 
     return (
