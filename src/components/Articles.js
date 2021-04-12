@@ -30,7 +30,13 @@ const Articles = () => {
         <div className="blog-page">
             <h1 className="blog-page-header">Articles</h1>
              {loading ? <h1 classname="loading">Loading...♻️</h1>}
-        </div>
+        </div className="articles">
+        {blogs?.?articles?.map(blog => (
+            <a></a>
+
+        )
+            )
+        }
     );
 };
 
