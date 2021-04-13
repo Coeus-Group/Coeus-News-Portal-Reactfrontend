@@ -4,9 +4,9 @@ import { selectUserInput, setBlogData } from '../feature/userHandle';
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-bootstrap/Carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img8 from '/src/assets/images/News_images_placeholder7.jpeg';
-import img5 from '/src/assets/images/News_images_placeholder4.jpeg';
-import img6 from '/src/assets/images/News_image_placeholder3.jpeg';
+import img8 from '../assets/images/image_placeholder7.jpeg';
+import img5 from '../assets/images/image_placeholder4.jpeg';
+import img6 from '../assets/images/image_placeholder3.jpeg';
 
 
 const Articles = () => {
@@ -78,7 +78,7 @@ const Articles = () => {
             {loading ? <h1 classname="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.articles?.map((blog) => (
-                    <a className="blog" target="_blank" href={blog.url}>
+                    <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
                         <img src={blog.image} />
                         <div>
                             <h3 className="sourceName">
