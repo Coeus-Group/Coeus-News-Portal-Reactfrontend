@@ -10,6 +10,23 @@ import img6 from '../assets/images/image_placeholder3.jpeg';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
 
+const options = {
+    bottom: '64px', // default: '32px'
+    right: 'unset', // default: '32px'
+    left: '32px', // default: 'unset'
+    time: '0.5s', // default: '0.3s'
+    mixColor: '#fff', // default: '#fff'
+    backgroundColor: '#fff',  // default: '#fff'
+    buttonColorDark: '#100f2c',  // default: '#100f2c'
+    buttonColorLight: '#fff', // default: '#fff'
+    saveInCookies: false, // default: true,
+    label: '🌓', // default: ''
+    autoMatchOsTheme: true // default: true
+  }
+   
+  const darkmode = new Darkmode(options);
+  darkmode.showWidget();
+
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
