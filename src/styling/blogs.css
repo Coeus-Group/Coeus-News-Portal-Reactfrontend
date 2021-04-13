@@ -1,3 +1,9 @@
 .blog__page {
     padding: 30px 170px;
   }
+
+  .blog__page__header {
+    letter-spacing: -1px;
+    font-size: 35px;
+  }
+   
