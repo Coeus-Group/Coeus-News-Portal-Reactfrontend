@@ -38,7 +38,7 @@ const Articles = () => {
 
         <div className="blog-page">
 
-            <Carousel>
+            {/* <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
@@ -72,7 +72,7 @@ const Articles = () => {
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
 
             <h1 className="blog-page-header">Articles</h1>
             {loading ? <h1 classname="loading">Loading...♻️</h1> : ""}

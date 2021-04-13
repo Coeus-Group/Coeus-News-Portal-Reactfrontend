@@ -77,4 +77,31 @@
     line-height: 1.5em;
   }
   
- 
+  @media (min-width: 768px) {
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px;
+        padding: 40px 0;
+      }
+
+    .navbar__header {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: -69px;
+    }
+
+    .logout__button {
+        margin-left: 492px;
+        padding: 12px 25px;
+        border-radius: -2px;
+        border: none;
+        background: rgb(39, 39, 39);
+        font-family: "Inter";
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: -128px;
+    }
+  }
