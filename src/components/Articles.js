@@ -11,7 +11,7 @@ import img6 from '../assets/images/image_placeholder3.jpeg';
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
-    const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011`
+    const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
