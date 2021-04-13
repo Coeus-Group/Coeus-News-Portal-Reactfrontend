@@ -33,11 +33,11 @@ const Articles = () => {
 
     return (
 
-        
+
 
 
         <div className="blog-page">
-            
+
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
@@ -87,6 +87,8 @@ const Articles = () => {
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
+                            <a href="#" className="btn btn-outline-sucess">View</a>
+
                         </div>
                     </a>
                 ))}

@@ -5,12 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import store from "./app/store";
-import ParticlesBg from "particles-bg";
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
-    {/* <ParticlesBg type="circle" bg={true} /> */}
+    <App /> 
   </Provider>,
   document.getElementById("root")
 );
