@@ -17,6 +17,11 @@
     padding-left: 10px;
   }
 
+  .sourceName {
+    display: flex;
+    align-items: center;
+  }
+
 .blog__page {
     padding: 30px 170px;
   }
