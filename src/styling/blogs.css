@@ -92,7 +92,7 @@
     }
 
     .logout__button {
-        margin-left: 492px;
+        margin-left: 545px;
         padding: 12px 25px;
         border-radius: -2px;
         border: none;
@@ -102,6 +102,23 @@
         font-size: 14px;
         font-weight: 500;
         cursor: pointer;
-        margin-top: -128px;
+        margin-top: -129px;
+    }
+
+    .signedIn {
+        display: none;
+    }
+
+    .blog__search {
+        flex: 1 1;
+        width: 100%;
+        display: flex;
+        padding: 10px 0px;
+        margin: 0px 70px;
+        justify-content: space-between;
+        background: rgb(39, 39, 39);
+        border-radius: 5px;
+        margin-right: 112px;
+        margin-left: 24px;
     }
   }
