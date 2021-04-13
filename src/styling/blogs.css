@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 .blog > img {
     width: 100%;
   }
@@ -26,9 +27,11 @@
     padding: 30px 170px;
   }
 
-  .blog__page__header {
+  .blog-page-header {
     letter-spacing: -1px;
     font-size: 35px;
+    text-align: center;
+    font-family: "Anonymous Pro";  
   }
 
   .blogs {
@@ -92,17 +95,7 @@
     }
 
     .logout__button {
-        margin-left: 545px;
-        padding: 12px 25px;
-        border-radius: -2px;
-        border: none;
-        background: rgb(39, 39, 39);
-        font-family: "Inter";
-        color: white;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        margin-top: -129px;
+        margin-right: -64px;
     }
 
     .signedIn {
@@ -118,7 +111,7 @@
         justify-content: space-between;
         background: rgb(39, 39, 39);
         border-radius: 5px;
-        margin-right: 112px;
-        margin-left: 24px;
+        margin-right: 7px;
+        margin-left: 23px;
     }
   }

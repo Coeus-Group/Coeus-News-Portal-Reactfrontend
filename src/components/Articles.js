@@ -74,7 +74,7 @@ const Articles = () => {
                 </Carousel.Item>
             </Carousel> */}
 
-            <h1 className="blog-page-header">Articles</h1>
+            <h1 className="blog-page-header">Top Articles</h1>
             {loading ? <h1 classname="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.articles?.map((blog) => (
