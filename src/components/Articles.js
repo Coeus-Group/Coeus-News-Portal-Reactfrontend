@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import img8 from '../assets/images/image_placeholder7.jpeg';
 import img5 from '../assets/images/image_placeholder4.jpeg';
 import img6 from '../assets/images/image_placeholder3.jpeg';
-
+import "../styling/blogs.css";
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
