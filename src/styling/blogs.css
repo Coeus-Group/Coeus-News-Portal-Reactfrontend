@@ -2,6 +2,14 @@
     width: 100%;
   }
 
+  .sourceName > span {
+    display: inline;
+    background: rgba(38, 0, 128, 0.226);
+    font-size: 11px;
+    padding: 5px 6px;
+    color: rgba(0, 11, 43, 0.534);
+    border-radius: 3px;
+  }
 
 .blog__page {
     padding: 30px 170px;
