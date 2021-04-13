@@ -6,4 +6,10 @@
     letter-spacing: -1px;
     font-size: 35px;
   }
-   
+
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 40px 0;
+  }
