@@ -8,6 +8,7 @@ import img8 from '../assets/images/image_placeholder7.jpeg';
 import img5 from '../assets/images/image_placeholder4.jpeg';
 import img6 from '../assets/images/image_placeholder3.jpeg';
 import "../styling/blogs.css";
+import Darkmode from 'darkmode-js';
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
@@ -37,6 +38,7 @@ const Articles = () => {
 
 
         <div className="blog-page">
+            
 
             {/* <Carousel>
                 <Carousel.Item interval={1000}>
