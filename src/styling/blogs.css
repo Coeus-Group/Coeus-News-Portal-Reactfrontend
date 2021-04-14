@@ -130,7 +130,7 @@
         font-size: 20px;
         font-weight: 700;
         margin-left: -69px;
-        display: none;
+        
     }
 
     .logout__button {
@@ -143,18 +143,6 @@
 
     .notSignedIn {
         display: none;
-    }
-
-    .navbar {
-        display: none;
-        justify-content: space-between;
-        height: 13vh;
-        align-items: center;
-        padding: 0px 80px;
-        background: white;
-        box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-        background: #1b1b1d;
-        color: white;
     }
 
   }
