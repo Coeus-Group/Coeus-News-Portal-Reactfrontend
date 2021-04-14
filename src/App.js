@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from "react";
-import Landingpage from "./Components/Landingpage";
+import Landingpage from "./components/Landingpage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { selectSignedIn } from "./feature/userHandle";
