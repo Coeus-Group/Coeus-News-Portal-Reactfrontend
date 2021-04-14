@@ -130,6 +130,19 @@
         font-size: 20px;
         font-weight: 700;
         margin-left: -69px;
+        display: none;
+    }
+
+    .logout__button {
+        margin-right: -64px;
+    }
+
+    .signedIn {
+        display: none;
+    }
+
+    .notSignedIn {
+        display: none;
     }
 
   }
