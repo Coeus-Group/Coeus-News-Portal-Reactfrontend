@@ -94,7 +94,7 @@ const Articles = () => {
             </Carousel> */}
 
             <h1 className="blog-page-header">Top Articles</h1>
-            {loading ? <h1 classname="loading">Loading...♻️</h1> : ""}
+            {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.articles?.map((blog) => (
                     <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
@@ -106,9 +106,10 @@ const Articles = () => {
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
-                            <a href="#" className="btn btn-outline-sucess">View</a>
+                            <a href="#" className="">View</a>
 
                         </div>
+                        
                     </a>
                 ))}
 
