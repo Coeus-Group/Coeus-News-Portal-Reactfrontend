@@ -34,12 +34,16 @@ const Landingpage = () => {
         <div className="login__message ">
           <h2>📰</h2>
           <h1 className="typewriter-text" >Coues News Portal</h1>
-          {/* <p>Online resource for reading blogs. Signup and start reading!</p> */}
+
+          
+
 
 
           <Typewriter
             options={{
-              strings: ['Online resource for searching & reading blogs. Signup and start reading!', 'Signin😋', '      ', 'Local News - News that matters to you', 'National News, Sports, Tech, Finance', 'Signin and explore!', 'Knowlegde is Power', '      '],
+
+              strings: ['Online resource for searching & reading blogs. Signup and start reading!', '   Signin😋', '      ', 'Local News - News that matters to you', 'National News, Sports, Tech, Finance', 'Signin and explore!', 'Knowlegde is Power', '      '],
+
               autoStart: true,
               loop: true,
             }}
