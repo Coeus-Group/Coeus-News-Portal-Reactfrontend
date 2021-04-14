@@ -155,4 +155,28 @@
         padding: 0px;
     }
 
+    .submit {
+        width: 31%;
+    }
+
+    .navbar__user__data {
+        display: flex;
+        align-items: center;
+        margin-block-start: -60px;
+        margin-left: 152px;
+    }
+
+    .logout__button {
+        margin-left: 9px;
+        padding: 0px 27px;
+        border-radius: 25px;
+        border: none;
+        background: rgb(39, 39, 39);
+        font-family: "Inter";
+        color: white;
+        font-size: 10px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
   }
