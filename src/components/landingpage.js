@@ -34,7 +34,7 @@ const Landingpage = () => {
         <div className="login__message ">
           <h2>📰</h2>
           <h1 className="typewriter-text" >Coues News Portal</h1>
-          {/* <p>Online resource for reading blogs. Signup and start reading!</p> */}
+          
 
 
           <Typewriter
