@@ -39,7 +39,7 @@ const Landingpage = () => {
 
           <Typewriter
             options={{
-              strings: ['Online resource for searching & reading blogs. Signup and start reading!', 'Signin😋', '      ', 'Local News - News that matters to you', 'National News, Sports, Tech, Finance', 'Signin and explore!', 'Knowlegde is Power', '      '],
+              strings: ['Online resource for searching & reading blogs. Signup and start reading!', '   Signin😋', '      ', 'Local News - News that matters to you', 'National News, Sports, Tech, Finance', 'Signin and explore!', 'Knowlegde is Power', '      '],
               autoStart: true,
               loop: true,
             }}
