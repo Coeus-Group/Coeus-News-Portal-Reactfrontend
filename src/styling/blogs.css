@@ -118,12 +118,18 @@
   }
 
   @media screen and (min-width :375px) and (max-width:667px){
-      
+
     .blogs {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 50px;
         padding: 40px 0;
-      }
+    }
+
+    .navbar__header {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: -69px;
+    }
 
   }
