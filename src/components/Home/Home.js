@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from "react-bootstrap/Carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
-import Cards from '../Cards/Cards';
+import Card from '../Cards/Cards';
 import img8 from '../../assets/images/News_image_placeholder7.jpeg';
 import img5 from '../../assets/images/News_image_placeholder7.jpeg';
 import img6 from '../../assets/images/News_image_placeholder7.jpeg';
@@ -50,7 +50,7 @@ function Home() {
                     <h3>RECENT STORIES</h3>
                 </div>
             </div>
-            <Cards />
+            <Card />
         </div>
     );
 }
