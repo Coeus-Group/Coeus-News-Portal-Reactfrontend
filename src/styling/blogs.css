@@ -1,48 +1,48 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 .blog > img {
     width: 100%;
-  }
+}
 
-  .sourceName > span {
+.sourceName > span {
     display: inline;
     background: rgba(38, 0, 128, 0.226);
     font-size: 11px;
     padding: 5px 6px;
     color: rgba(0, 11, 43, 0.534);
     border-radius: 3px;
-  }
+}
 
-  .sourceName > p {
+.sourceName > p {
     font-size: 10px;
     font-weight: 500;
     padding-left: 10px;
-  }
+}
 
-  .sourceName {
+.sourceName {
     display: flex;
     align-items: center;
-  }
+}
 
 .blog__page {
     padding: 30px 170px;
-  }
+}
 
-  .blog-page-header {
+.blog-page-header {
     letter-spacing: -1px;
     font-size: 35px;
     text-align: center;
     font-family: "Anonymous Pro";
     font-weight: bold;  
-  }
+}
 
-  .blogs {
+.blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
     padding: 40px 0;
-  }
+}
 
-  .blog {
+.blog {
     min-width: 300px;
     margin: auto;
     background: white;
@@ -50,44 +50,44 @@
     height: 100%;
     text-decoration: none;
     color: black;
-  }
+}
 
-  .blog > div {
+.blog > div {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     padding: 0px 30px 0px 30px;
-  }
+}
 
-  .blog > div > p {
+.blog > div > p {
     font-size: 13px;
     line-height: 1.6em;
     color: rgb(90, 90, 90);
     padding-bottom: 30px;
-  }
+}
 
-  .blog > div > h1 {
+.blog > div > h1 {
     font-size: 25px;
     letter-spacing: -0.6px;
     line-height: 1.3em;
     padding: 10px 0;
     font-weight: 700;
     text-decoration: underline;
-  }
+}
 
-  .no__blogs {
+.no__blogs {
     font-size: 25px;
     font-weight: 500;
     line-height: 1.5em;
-  }
+}
   
-  @media screen and (min-width :768px) and (max-width:1024px){
+@media screen and (min-width :768px) and (max-width:1024px){
     .blogs {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 50px;
         padding: 40px 0;
-      }
+    }
 
     .navbar__header {
         font-size: 20px;
@@ -115,9 +115,9 @@
         margin-right: 7px;
         margin-left: 23px;
     }
-  }
+}
 
-  @media screen and (min-width :375px) and (max-width:667px){
+@media screen and (min-width :375px) and (max-width:667px){
 
     .blogs {
         display: grid;
@@ -178,5 +178,15 @@
         font-weight: 500;
         cursor: pointer;
     }
+}
 
-  }
+@media screen and (min-width :414px) and (max-width:736px){
+
+    .navbar__user__data {
+        display: flex;
+        align-items: center;
+        margin-block-start: -57px;
+        margin-left: 190px;
+    }
+
+}
