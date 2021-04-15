@@ -13,7 +13,7 @@ import {
 
 const Navbar = () => {
 
-    const [inputValue, setInputValue] = useState("london");
+    const [inputValue, setInputValue] = useState("tech");
     const isSignedIn = useSelector(selectSignedIn);
     const userData = useSelector(selectUserData);
 
