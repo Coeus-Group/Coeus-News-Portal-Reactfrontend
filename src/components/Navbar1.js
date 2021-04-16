@@ -11,7 +11,7 @@ import {
     setUserData,
 } from "../feature/userHandle";
 
-const Navbar = () => {
+const Navbar1 = () => {
 
     const [inputValue, setInputValue] = useState("tech");
     const isSignedIn = useSelector(selectSignedIn);
@@ -76,4 +76,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar1;
