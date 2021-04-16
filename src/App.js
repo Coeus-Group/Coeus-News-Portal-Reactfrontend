@@ -5,7 +5,7 @@ import Landingpage from "./components/Landingpage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { selectSignedIn } from "./feature/userHandle";
-import Navbar1 from "./components/Navbar";
+import Navbar1 from "./components/Navbar1";
 import "./styling/app.css";
 import Articles from './components/Articles';
 import { Navbar, Nav } from "react-bootstrap";
