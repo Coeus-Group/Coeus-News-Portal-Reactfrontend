@@ -4,11 +4,10 @@ import { selectUserInput, setBlogData } from '../feature/userHandle';
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-bootstrap/Carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img8 from '../assets/images/image_placeholder7.jpeg';
-import img5 from '../assets/images/image_placeholder4.jpeg';
-import img6 from '../assets/images/image_placeholder3.jpeg';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Navbar, Nav } from "react-bootstrap";
 
 const options = {
     bottom: '64px', // default: '32px'
@@ -30,6 +29,7 @@ const options = {
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
+    const worldArticles_url = `https://gnews.io/api/v4/top-headlines?&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
@@ -55,45 +55,9 @@ const Articles = () => {
 
 
         <div className="blog-page">
-            
 
-            {/* <Carousel>
-                <Carousel.Item interval={1000}>
-                    <img
-                        className="d-block w-100"
-                        src={img5}
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={500}>
-                    <img
-                        className="d-block w-100"
-                        src={img6}
-                        alt="Second slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={img8}
-                        alt="Third slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel> */}
-
-            <h1 className="blog-page-header">Top Articles</h1>
+            <h1 className="blog-page-header">Searched Articles</h1>
+            <div></div>
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.articles?.map((blog) => (
@@ -120,6 +84,8 @@ const Articles = () => {
                 )}
 
             </div>
+            
+
         </div>
     );
 };

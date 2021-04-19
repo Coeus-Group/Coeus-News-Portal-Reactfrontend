@@ -21,11 +21,7 @@ const App = () => {
   return (
       <div className="app">
         <Navbar1 /> 
-        <Landingpage />
-        {isSignedIn && <Articles/>}
-        {isSignedIn && <Router/>}
-
-        <Router>
+        {isSignedIn && <Router>
       <header>
         <div className="App">
           <Router>
@@ -51,7 +47,12 @@ const App = () => {
         </div>
       </header>
 
-    </Router>
+    </Router>}
+        <Landingpage />
+        {isSignedIn && <Articles/>}
+        
+        
+        
 
       </div>
 

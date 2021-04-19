@@ -13,7 +13,7 @@ import {
 
 const Navbar1 = () => {
 
-    const [inputValue, setInputValue] = useState("tech");
+    const [inputValue, setInputValue] = useState();
     const isSignedIn = useSelector(selectSignedIn);
     const userData = useSelector(selectUserData);
 
@@ -31,7 +31,7 @@ const Navbar1 = () => {
 
 
     return (
-        <div className="navbar">
+        <div className="navbar1">
             <h1 className="navbar__header">Coeus News Portal 📰</h1>
             {isSignedIn && (
                 <div className="blog__search">
@@ -72,7 +72,11 @@ const Navbar1 = () => {
             ) : (
                 <h1 className="notSignedIn">User unavailable 🔴 </h1>
             )}
+
+
         </div>
+
+        
     );
 };
 
