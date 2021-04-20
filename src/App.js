@@ -50,6 +50,7 @@ const App = () => {
     </Router>}
         <Landingpage />
         {isSignedIn && <Articles/>}
+        {isSignedIn && <Worldnews/>}
         
         
         

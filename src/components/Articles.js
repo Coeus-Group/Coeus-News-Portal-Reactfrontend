@@ -56,7 +56,7 @@ const Articles = () => {
 
         <div className="blog-page">
 
-            <h1 className="blog-page-header">Searched Articles</h1>
+            <h1 className="blog-page-header">Top Articles</h1>
             <div></div>
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
