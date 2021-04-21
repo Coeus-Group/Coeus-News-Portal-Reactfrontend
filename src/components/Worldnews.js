@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import { selectUserInput, setBlogData } from '../feature/userHandle';
 import { useDispatch, useSelector } from "react-redux";
-import Carousel from "react-bootstrap/Carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navbar, Nav } from "react-bootstrap";
 
 const options = {
     bottom: '64px', // default: '32px'
@@ -26,10 +23,10 @@ const options = {
   const darkmode = new Darkmode(options);
   darkmode.showWidget();
 
-const Articles = () => {
+const Worldnews = () => {
     const searchInput = useSelector(selectUserInput);
-    const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
-    const worldArticles_url = `https://gnews.io/api/v4/top-headlines?&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
+    const worldArticles_url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/London`
+    // https://gnews.io/api/v4/top-headlines?&token=cc9053584965ba9e9062087c7c0f4011&lang=en
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
@@ -37,7 +34,7 @@ const Articles = () => {
 
     useEffect(() => {
         axios
-            .get(articles_url)
+            .get(worldArticles_url)
             .then((response) => {
                 dispatch(setBlogData(response.data));
                 setBlogs(response.data);
@@ -47,25 +44,21 @@ const Articles = () => {
                 console.log(error);
 
             });
-    }, [searchInput]);
+    },  [worldArticles_url]);
+
 
     return (
-
-
-
-
         <div className="blog-page">
 
-            <h1 className="blog-page-header">Top Stories</h1>
-            <div></div>
+            <h1 className="blog-page-header">Worldnews</h1>
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
-                {blogs?.articles?.map((blog) => (
+                {blogs?.map((blog) => (
                     <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
-                        <img src={blog.image} />
+                        <img src={blog.article_image_URL} />
                         <div>
                             <h3 className="sourceName">
-                                <span>{blog.source.name}</span>
+                                <span>{blog.author_name}</span>
                                 <p>{blog.publishedAt}</p>
                             </h3>
                             <h1>{blog.title}</h1>
@@ -84,10 +77,8 @@ const Articles = () => {
                 )}
 
             </div>
-            
-
         </div>
     );
 };
 
-export default Articles;
+export default Worldnews;

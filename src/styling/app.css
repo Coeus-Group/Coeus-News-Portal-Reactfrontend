@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 * {
   margin: 0;
   padding: 0;
@@ -8,3 +9,41 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+.bg-dark {
+  background-color: #343a4000!important;
+}
+
+.mr-auto, .mx-auto {
+  
+  margin-left: 390px;
+  font-family: "Anonymous Pro";
+  font-weight: bold;
+  font-size:large;
+  
+}
+
+a+a {
+  margin-left: 50px;
+}
+
+@media screen and (min-width :768px) and (max-width:1024px){
+
+  .mr-auto, .mx-auto {
+  
+    margin-left: 100px;
+    font-family: "Anonymous Pro";
+    font-weight: bold;
+   
+    
+  }
+  
+
+}
+
+
+
+
+
+
+

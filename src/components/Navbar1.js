@@ -11,9 +11,9 @@ import {
     setUserData,
 } from "../feature/userHandle";
 
-const Navbar = () => {
+const Navbar1 = () => {
 
-    const [inputValue, setInputValue] = useState("london");
+    const [inputValue, setInputValue] = useState();
     const isSignedIn = useSelector(selectSignedIn);
     const userData = useSelector(selectUserData);
 
@@ -31,7 +31,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar">
+        <div className="navbar1">
             <h1 className="navbar__header">Coeus News Portal 📰</h1>
             {isSignedIn && (
                 <div className="blog__search">
@@ -72,8 +72,12 @@ const Navbar = () => {
             ) : (
                 <h1 className="notSignedIn">User unavailable 🔴 </h1>
             )}
+
+
         </div>
+
+        
     );
 };
 
-export default Navbar;
+export default Navbar1;
