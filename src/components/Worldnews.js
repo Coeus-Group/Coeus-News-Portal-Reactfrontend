@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
+import { useParams } from 'react-router-dom';
 
 const options = {
     bottom: '64px', // default: '32px'
@@ -24,42 +25,60 @@ const options = {
   darkmode.showWidget();
 
 const Worldnews = () => {
+    let { id } = useParams();
+    const newscategory = ['business', 'science' ,'technology','entertainment','health','sports'];
+    const locations = ['London', 'Birmingham' ,'Liverpool','Oxford','Cambrigde','Manchester'];
+
+    
+    
+    console.log(id);
+    let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     const searchInput = useSelector(selectUserInput);
-    const worldArticles_url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/London`
-    // https://gnews.io/api/v4/top-headlines?&token=cc9053584965ba9e9062087c7c0f4011&lang=en
+    
+    const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
-
     const [loading, setLoading] = useState(true);
+    let url = ''
+
+    if (newscategory.includes(newsType)){
+        url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getCategories/${newsType}`
+
+
+    } else{
+         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/${newsType}`
+    }
 
     useEffect(() => {
         axios
-            .get(worldArticles_url)
+            .get(url)
             .then((response) => {
                 dispatch(setBlogData(response.data));
                 setBlogs(response.data);
                 setLoading(false);
             })
+        
             .catch((error) => {
                 console.log(error);
 
             });
-    },  [worldArticles_url]);
+    },  [newsType]);
 
 
+   let categoryName= newsType.substring(0, 1).toUpperCase() + newsType.substring(1, newsType.length);
     return (
         <div className="blog-page">
 
-            <h1 className="blog-page-header">Worldnews</h1>
+            <h1 className="blog-page-header" >{categoryName}</h1>
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.map((blog) => (
-                    <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
+                    <a className="blog" target="_blank" rel="noreferrer" href={blog.article_URL}>
                         <img src={blog.article_image_URL} />
                         <div>
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
-                                <p>{blog.publishedAt}</p>
+                                <p>{blog.article_location}</p>
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>

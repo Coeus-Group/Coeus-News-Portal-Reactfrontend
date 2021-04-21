@@ -29,7 +29,7 @@ const options = {
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
-    const worldArticles_url = `https://gnews.io/api/v4/top-headlines?&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
+    const worldArticles_url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/London`
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
@@ -42,12 +42,14 @@ const Articles = () => {
                 dispatch(setBlogData(response.data));
                 setBlogs(response.data);
                 setLoading(false);
+                
             })
+            
             .catch((error) => {
                 console.log(error);
 
             });
-    }, [searchInput]);
+    },[searchInput]);
 
     return (
 
@@ -85,9 +87,13 @@ const Articles = () => {
 
             </div>
             
-
         </div>
+        
     );
+
+    
+
+
 };
 
 export default Articles;
