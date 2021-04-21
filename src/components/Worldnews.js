@@ -73,12 +73,12 @@ const Worldnews = () => {
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.map((blog) => (
-                    <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
+                    <a className="blog" target="_blank" rel="noreferrer" href={blog.article_URL}>
                         <img src={blog.article_image_URL} />
                         <div>
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
-                                <p>{blog.publishedAt}</p>
+                                <p>{blog.article_location}</p>
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
