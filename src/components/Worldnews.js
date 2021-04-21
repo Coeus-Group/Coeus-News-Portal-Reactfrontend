@@ -31,7 +31,7 @@ const Worldnews = () => {
 
     
     
-    console.log(id);
+    
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     const searchInput = useSelector(selectUserInput);
     

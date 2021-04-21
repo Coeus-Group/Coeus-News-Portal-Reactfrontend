@@ -41,6 +41,15 @@ a+a {
 
 }
 
+@media screen and (width: 375px) {
+  .bg-dark {
+    background-color: #1a1928!important;
+}
+
+  
+
+}
+
 
 
 
