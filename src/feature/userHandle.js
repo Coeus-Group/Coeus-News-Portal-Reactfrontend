@@ -5,7 +5,7 @@ const userHandle = createSlice({
   initialState: {
     isSignedIn: false,
     userData: null,
-    searchInput: "london",
+    searchInput: "tech",
     blogData: null,
   },
   reducers: {
