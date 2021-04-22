@@ -67,14 +67,14 @@ const Articles = () => {
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
-                            <a href="#" className="">View</a>
+                            {/* <a href="#" className="">View</a> */}
 
                         </div>
                         
                     </a>
                 ))}
 
-                {blogs?.totalArticles == 0 && (
+                {blogs?.totalArticles === 0 && (
                     <h1 className="no__blogs">
                         No blogs found 😵. Please try searching another key-word
                     </h1>

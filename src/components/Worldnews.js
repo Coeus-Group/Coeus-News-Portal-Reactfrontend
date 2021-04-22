@@ -91,7 +91,7 @@ const Worldnews = () => {
                     </a>
                 ))}
 
-                {blogs?.totalArticles == 0 && (
+                {blogs?.totalArticles === 0 && (
                     <h1 className="no__blogs">
                         No blogs found 😵. Please try searching another key-word
                     </h1>
