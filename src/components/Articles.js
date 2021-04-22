@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import { selectUserInput, setBlogData } from '../feature/userHandle';
 import { useDispatch, useSelector } from "react-redux";
-import Carousel from "react-bootstrap/Carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navbar, Nav } from "react-bootstrap";
 
 const options = {
     bottom: '64px', // default: '32px'
@@ -29,7 +26,7 @@ const options = {
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
-    const worldArticles_url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/London`
+    
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
@@ -51,10 +48,10 @@ const Articles = () => {
             });
     },[searchInput]);
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [Articles]);
     return (
-
-
-
 
         <div className="blog-page">
 

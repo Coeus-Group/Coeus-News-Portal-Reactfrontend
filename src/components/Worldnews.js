@@ -34,7 +34,6 @@ const Worldnews = () => {
     
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     const searchInput = useSelector(selectUserInput);
-    
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
@@ -46,7 +45,7 @@ const Worldnews = () => {
 
 
     } else{
-         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/${newsType}`
+        url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/${newsType}`
     }
 
     useEffect(() => {

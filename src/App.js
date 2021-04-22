@@ -1,13 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React from "react";
 import Landingpage from "./components/Landingpage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { selectSignedIn } from "./feature/userHandle";
 import Navbar1 from "./components/Navbar1";
-import Breakingnews from "./components/Breakingnews";
-import Entertainmentnews from "./components/Entertainmentnews";
 import Worldnews from "./components/Worldnews";
 import "./styling/app.css";
 import Articles from './components/Articles';
