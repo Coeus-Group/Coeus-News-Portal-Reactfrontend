@@ -87,6 +87,18 @@
   outline: none;
 }
 
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: rgb(73, 60, 60);
+}
+
+#navbar_header{
+  color:white;
+}
+
+a:hover{
+  color:rgb(46, 64, 163);
+}
 
 @media screen and (max-width: 800px) {
   .navbar1{

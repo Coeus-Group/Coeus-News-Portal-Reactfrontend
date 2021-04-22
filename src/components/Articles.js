@@ -48,9 +48,7 @@ const Articles = () => {
             });
     },[searchInput]);
 
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-      }, [Articles]);
+      
     return (
 
         <div className="blog-page">
@@ -61,7 +59,7 @@ const Articles = () => {
             <div className="blogs">
                 {blogs?.articles?.map((blog) => (
                     <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
-                        <img src={blog.image} />
+                        <img alt="Coeus News Portal" src={blog.image} />
                         <div>
                             <h3 className="sourceName">
                                 <span>{blog.source.name}</span>

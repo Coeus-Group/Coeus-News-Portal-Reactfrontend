@@ -91,6 +91,8 @@
 .blog > img:hover {
     transform: scale(0.9);
 }
+
+
   
 @media screen and (width: 768px) {
     .blogs {

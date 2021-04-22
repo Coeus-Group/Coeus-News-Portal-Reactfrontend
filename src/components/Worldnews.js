@@ -7,6 +7,7 @@ import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
 import { useParams } from 'react-router-dom';
 
+
 const options = {
     bottom: '64px', // default: '32px'
     right: 'unset', // default: '32px'
@@ -23,6 +24,8 @@ const options = {
    
   const darkmode = new Darkmode(options);
   darkmode.showWidget();
+
+  
 
 const Worldnews = () => {
     let { id } = useParams();
@@ -72,8 +75,8 @@ const Worldnews = () => {
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.map((blog) => (
-                    <a className="blog" target="_blank" rel="noreferrer" href={blog.article_URL}>
-                        <img src={blog.article_image_URL} />
+                    <a className="blog" target="_blank"  rel="noreferrer" href={blog.article_URL}>
+                        <img alt="Coeus News Portal" src={blog.article_image_URL} />
                         <div>
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
@@ -95,6 +98,9 @@ const Worldnews = () => {
                 )}
 
             </div>
+
+            
+
         </div>
     );
 };
