@@ -18,15 +18,15 @@ const options = {
     saveInCookies: false, // default: true,
     label: '🌓', // default: ''
     autoMatchOsTheme: true // default: true
-  }
-   
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
-    
+
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
@@ -39,16 +39,16 @@ const Articles = () => {
                 dispatch(setBlogData(response.data));
                 setBlogs(response.data);
                 setLoading(false);
-                
+
             })
-            
+
             .catch((error) => {
                 console.log(error);
 
             });
-    },[searchInput]);
+    }, [searchInput]);
 
-      
+
     return (
 
         <div className="blog-page">
@@ -67,10 +67,9 @@ const Articles = () => {
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
-                            {/* <a href="#" className="">View</a> */}
 
                         </div>
-                        
+
                     </a>
                 ))}
 
@@ -81,12 +80,12 @@ const Articles = () => {
                 )}
 
             </div>
-            
+
         </div>
-        
+
     );
 
-    
+
 
 
 };

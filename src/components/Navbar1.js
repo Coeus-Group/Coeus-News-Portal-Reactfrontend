@@ -76,7 +76,7 @@ const Navbar1 = () => {
 
         </div>
 
-        
+
     );
 };
 

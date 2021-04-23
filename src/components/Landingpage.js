@@ -22,7 +22,7 @@ const Landingpage = () => {
     dispatch(setUserData(response.profileObj));
   };
 
-  
+
   return (
     <div className="home__page" style={{ display: isSignedIn ? "none" : "" }}>
       <ParticlesBg type="cobweb" bg={true} />
@@ -30,7 +30,7 @@ const Landingpage = () => {
         <div className="login__message ">
           <h2>📰</h2>
           <h1 className="typewriter-text" >Coeus News Portal</h1>
-         
+
           <Typewriter
             options={{
 

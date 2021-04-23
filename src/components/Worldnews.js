@@ -20,21 +20,21 @@ const options = {
     saveInCookies: false, // default: true,
     label: '🌓', // default: ''
     autoMatchOsTheme: true // default: true
-  }
-   
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+}
 
-  
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+
+
 
 const Worldnews = () => {
     let { id } = useParams();
-    const newscategory = ['business', 'science' ,'technology','entertainment','health','sports'];
-    const locations = ['London', 'Birmingham' ,'Liverpool','Oxford','Cambrigde','Manchester'];
+    const newscategory = ['business', 'science', 'technology', 'entertainment', 'health', 'sports'];
+    const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
 
-    
-    
-    
+
+
+
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
@@ -43,11 +43,11 @@ const Worldnews = () => {
     const [loading, setLoading] = useState(true);
     let url = ''
 
-    if (newscategory.includes(newsType)){
+    if (newscategory.includes(newsType)) {
         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getCategories/${newsType}`
 
 
-    } else{
+    } else {
         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/${newsType}`
     }
 
@@ -59,15 +59,15 @@ const Worldnews = () => {
                 setBlogs(response.data);
                 setLoading(false);
             })
-        
+
             .catch((error) => {
                 console.log(error);
 
             });
-    },  [newsType]);
+    }, [newsType]);
 
 
-   let categoryName= newsType.substring(0, 1).toUpperCase() + newsType.substring(1, newsType.length);
+    let categoryName = newsType.substring(0, 1).toUpperCase() + newsType.substring(1, newsType.length);
     return (
         <div className="blog-page">
 
@@ -75,7 +75,7 @@ const Worldnews = () => {
             {loading ? <h1 className="loading">Loading...♻️</h1> : ""}
             <div className="blogs">
                 {blogs?.map((blog) => (
-                    <a className="blog" target="_blank"  rel="noreferrer" href={blog.article_URL}>
+                    <a className="blog" target="_blank" rel="noreferrer" href={blog.article_URL}>
                         <img alt="Coeus News Portal" src={blog.article_image_URL} />
                         <div>
                             <h3 className="sourceName">
@@ -84,10 +84,8 @@ const Worldnews = () => {
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
-                            <a href="#" className="">View</a>
-
                         </div>
-                        
+
                     </a>
                 ))}
 
@@ -96,11 +94,7 @@ const Worldnews = () => {
                         No blogs found 😵. Please try searching another key-word
                     </h1>
                 )}
-
             </div>
-
-            
-
         </div>
     );
 };

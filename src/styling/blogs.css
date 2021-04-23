@@ -116,7 +116,7 @@
 
 @media screen and (width: 375px) {
     .blogs {
-    width: 265%; /* The width is 100%, when the viewport is 800px or smaller */
+        width: 265%; 
       
     }
 
