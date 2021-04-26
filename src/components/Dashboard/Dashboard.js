@@ -82,9 +82,9 @@ function Dashboard() {
             <tr key={index}>
                 <td>{Articles.title}</td>
                 <td>{Articles.publishedDate}</td>
-                <td><a className="btn-sm" href="#"><i className="fa fa-edit"></i></a>
-                    <a onClick={() => deleteArticle(Articles.id)} className="btn-sm" href="#"><i className="fa fa-trash"></i></a>
-                    <a className="btn-sm" href="#"><i className="fa fa-check"></i></a>
+                <td><a className="btn-sm"><i className="fa fa-edit"></i></a>
+                    <a onClick={() => deleteArticle(Articles.id)} className="btn-sm"><i className="fa fa-trash"></i></a>
+                    <a className="btn-sm"><i className="fa fa-check"></i></a>
                 </td>
             </tr>
         );
