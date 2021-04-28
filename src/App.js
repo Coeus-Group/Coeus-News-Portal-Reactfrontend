@@ -16,7 +16,8 @@ import store from "./app/store";
 
 
 const App = () => {
-  <Provider store={store}>const isSignedIn = useSelector(selectSignedIn)</Provider>;
+  // <Provider store={store}>const isSignedIn = useSelector(selectSignedIn)</Provider>;
+  const isSignedIn = useSelector(selectSignedIn)
   return (
     <div className="app">
       <Navbar1 />
