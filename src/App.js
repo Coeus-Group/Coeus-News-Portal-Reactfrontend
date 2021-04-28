@@ -1,26 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import Landingpage from "./components/Landingpage";
+import LandingPage from "./components/LandingPage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import { selectSignedIn } from "./feature/userHandle";
-import Navbar1 from "./components/Navbar1";
-import Worldnews from "./components/Worldnews";
+import { selectSignedIn } from "./constants/userHandle";
+import NavBar from "./components/NavBar";
+import WorldNews from "./components/WorldNews";
 import "./styling/app.css";
 import Articles from './components/Articles';
 import { Navbar, Nav } from "react-bootstrap";
-import { Provider } from "react-redux";
-import store from "./app/store";
+
 
 
 
 
 const App = () => {
-  // <Provider store={store}>const isSignedIn = useSelector(selectSignedIn)</Provider>;
   const isSignedIn = useSelector(selectSignedIn)
   return (
     <div className="app">
-      <Navbar1 />
+      <NavBar />
+      
       {isSignedIn && <Router>
         <header>
           <div className="App">
@@ -59,7 +58,7 @@ const App = () => {
 
                 </div>
                 <Switch>
-                  <Route path="/:id" children={<Worldnews />} />
+                  <Route path="/:id" children={<WorldNews />} />
                 </Switch>
               </main>
             </Router>
@@ -67,7 +66,7 @@ const App = () => {
         </header>
 
       </Router>}
-      <Landingpage />
+      <LandingPage />
       {isSignedIn && <Articles />}
 
     </div>

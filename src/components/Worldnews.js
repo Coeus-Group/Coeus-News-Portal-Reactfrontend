@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-import { selectUserInput, setBlogData } from '../feature/userHandle';
+import { selectUserInput, setBlogData } from '../constants/userHandle';
 import { useDispatch, useSelector } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styling/blogs.css";
@@ -27,17 +27,17 @@ darkmode.showWidget();
 
 
 
-const Worldnews = () => {
+const WorldNews = () => {
     let { id } = useParams();
     const newscategory = ['business', 'science', 'technology', 'entertainment', 'health', 'sports'];
-    const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
+    // const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
 
 
 
 
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
-    const searchInput = useSelector(selectUserInput);
-    const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
+    // const searchInput = useSelector(selectUserInput);
+    // const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
     const [loading, setLoading] = useState(true);
@@ -99,4 +99,4 @@ const Worldnews = () => {
     );
 };
 
-export default Worldnews;
+export default WorldNews;

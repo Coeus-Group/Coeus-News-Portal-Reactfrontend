@@ -9,10 +9,10 @@ import {
     setInput,
     setSignedIn,
     setUserData,
-} from "../feature/userHandle";
+} from "../constants/userHandle";
 
 
-const Navbar1 = () => {
+const NavBar = () => {
 
     const [inputValue, setInputValue] = useState();
     const isSignedIn = useSelector(selectSignedIn);
@@ -81,4 +81,4 @@ const Navbar1 = () => {
     );
 };
 
-export default Navbar1;
+export default NavBar;

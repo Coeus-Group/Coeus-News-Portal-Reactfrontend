@@ -8,12 +8,12 @@ import {
   selectSignedIn,
   setSignedIn,
   setUserData,
-} from "../feature/userHandle";
+} from "../constants/userHandle";
 
 import "../styling/home.css"
 
 
-const Landingpage = () => {
+const LandingPage = () => {
   const isSignedIn = useSelector(selectSignedIn);
 
   const dispatch = useDispatch();
@@ -66,4 +66,4 @@ const Landingpage = () => {
   );
 };
 
-export default Landingpage;
+export default LandingPage;
