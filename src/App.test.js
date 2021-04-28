@@ -1,13 +1,26 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import { Provider } from 'react-redux'
+import React from 'react'
+import '@testing-library/jest-dom/extend-expect'
+import { NameContext, NameProvider, NameConsumer } from '../react-context'
 
+/**
+ * Test default values by rendering a context consumer without a
+ * matching provider
+ */
+test('NameConsumer shows default value', () => {
+  render(<NameConsumer />)
+  expect(screen.getByText(/^My Name Is:/)).toHaveTextContent(
+    'My Name Is: Unknown'
+  )
+})
 
-test('renders login with google link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Login with Google/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// test('renders login with google link', () => {
+//   render(<App />);
+//   const linkElement = screen.getByText(/Login with Google/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
 
 // const { getByText } = render(<Provider store={store}><App /></Provider>)
 
