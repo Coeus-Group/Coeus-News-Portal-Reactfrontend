@@ -9,12 +9,14 @@ import Worldnews from "./components/Worldnews";
 import "./styling/app.css";
 import Articles from './components/Articles';
 import { Navbar, Nav } from "react-bootstrap";
+import { Provider } from "react-redux";
+import store from "./app/store";
 
 
 
 
 const App = () => {
-  const isSignedIn = useSelector(selectSignedIn);
+  <Provider store={store}>const isSignedIn = useSelector(selectSignedIn)</Provider>;
   return (
     <div className="app">
       <Navbar1 />

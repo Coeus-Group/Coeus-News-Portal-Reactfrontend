@@ -12,6 +12,7 @@ import {
 
 import "../styling/home.css"
 
+
 const Landingpage = () => {
   const isSignedIn = useSelector(selectSignedIn);
 
