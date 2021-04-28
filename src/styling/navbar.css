@@ -8,6 +8,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   background: #1b1b1d;
   color: white;
+  
 }
 
 .navbar__header {
@@ -46,6 +47,7 @@
 
 .notSignedIn {
   font-size: 15px;
+  isolation: isolate;
 }
   
 .blog__search {
