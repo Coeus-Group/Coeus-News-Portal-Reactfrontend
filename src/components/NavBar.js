@@ -9,7 +9,7 @@ import {
     setInput,
     setSignedIn,
     setUserData,
-} from "../constants/userHandle";
+} from "../reducers/userHandle";
 
 
 const NavBar = () => {

@@ -3,23 +3,18 @@ import React from "react";
 import LandingPage from "./components/LandingPage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import { selectSignedIn } from "./constants/userHandle";
+import { selectSignedIn } from "./reducers/userHandle";
 import NavBar from "./components/NavBar";
 import WorldNews from "./components/WorldNews";
 import "./styling/app.css";
 import Articles from './components/Articles';
 import { Navbar, Nav } from "react-bootstrap";
 
-
-
-
-
 const App = () => {
   const isSignedIn = useSelector(selectSignedIn)
   return (
     <div className="app">
       <NavBar />
-      
       {isSignedIn && <Router>
         <header>
           <div className="App">
@@ -41,21 +36,21 @@ const App = () => {
                       </Navbar.Collapse>
                     </Navbar>
                   </div>
-
-                  <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                      <Nav className="mr-auto">
-                        <Nav.Link><Link to={"/Worldnews:London"}>London</Link></Nav.Link>
-                        <Nav.Link><Link to={"/Worldnews:Birmingham"}>Birmingham</Link></Nav.Link>
-                        <Nav.Link><Link to={"/Worldnews:Liverpool"}>Liverpool</Link></Nav.Link>
-                        <Nav.Link><Link to={"/Worldnews:Manchester"}>Manchester</Link></Nav.Link>
-                        <Nav.Link><Link to={"/Worldnews:Oxford"}>Oxford</Link></Nav.Link>
-                        <Nav.Link><Link to={"/Worldnews:Cambridge"}>Cambridge</Link></Nav.Link>
-                      </Nav>
-                    </Navbar.Collapse>
-                  </Navbar>
-
+                  <div className="row-2">
+                    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+                      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                      <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="mr-auto">
+                          <Nav.Link><Link to={"/Worldnews:London"}>London</Link></Nav.Link>
+                          <Nav.Link><Link to={"/Worldnews:Birmingham"}>Birmingham</Link></Nav.Link>
+                          <Nav.Link><Link to={"/Worldnews:Liverpool"}>Liverpool</Link></Nav.Link>
+                          <Nav.Link><Link to={"/Worldnews:Manchester"}>Manchester</Link></Nav.Link>
+                          <Nav.Link><Link to={"/Worldnews:Oxford"}>Oxford</Link></Nav.Link>
+                          <Nav.Link><Link to={"/Worldnews:Cambridge"}>Cambridge</Link></Nav.Link>
+                        </Nav>
+                      </Navbar.Collapse>
+                    </Navbar>
+                  </div>
                 </div>
                 <Switch>
                   <Route path="/:id" children={<WorldNews />} />
@@ -64,13 +59,10 @@ const App = () => {
             </Router>
           </div>
         </header>
-
       </Router>}
       <LandingPage />
       {isSignedIn && <Articles />}
-
     </div>
-
   );
 };
 

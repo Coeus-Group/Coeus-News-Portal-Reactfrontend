@@ -8,7 +8,7 @@ import {
   selectSignedIn,
   setSignedIn,
   setUserData,
-} from "../constants/userHandle";
+} from "../reducers/userHandle";
 
 import "../styling/home.css"
 

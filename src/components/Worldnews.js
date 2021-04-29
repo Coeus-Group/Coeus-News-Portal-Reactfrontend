@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-import { selectUserInput, setBlogData } from '../constants/userHandle';
-import { useDispatch, useSelector } from "react-redux";
+import { setBlogData } from '../reducers/userHandle';
+import { useDispatch } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
@@ -25,15 +25,10 @@ const options = {
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
 
-
-
 const WorldNews = () => {
     let { id } = useParams();
     const newscategory = ['business', 'science', 'technology', 'entertainment', 'health', 'sports'];
     // const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
-
-
-
 
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     // const searchInput = useSelector(selectUserInput);
