@@ -19,8 +19,7 @@ body {
   margin-left: 200px;
   font-family: "Anonymous Pro";
   font-weight: bold;
-  font-size:large;
-  
+  font-size:large; 
 }
 
 a+a {
@@ -30,15 +29,16 @@ a+a {
 @media screen and (min-width :768px) and (max-width:1024px){
 
   .mr-auto, .mx-auto {
-  
     margin-left: 100px;
     font-family: "Anonymous Pro";
-    font-weight: bold;
-   
-    
+    font-weight: bold; 
   }
-  
+}
 
+@media screen and (width: 375px) {
+  .bg-dark {
+    background-color: #1a1928!important;
+  }
 }
 
 

@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-import { selectUserInput, setBlogData } from '../feature/userHandle';
+import { selectUserInput, setBlogData } from '../reducers/userHandle';
 import { useDispatch, useSelector } from "react-redux";
-import Carousel from "react-bootstrap/Carousel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styling/blogs.css";
 import Darkmode from 'darkmode-js';
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navbar, Nav } from "react-bootstrap";
 
 const options = {
     bottom: '64px', // default: '32px'
@@ -21,15 +18,15 @@ const options = {
     saveInCookies: false, // default: true,
     label: '🌓', // default: ''
     autoMatchOsTheme: true // default: true
-  }
-   
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
 
 const Articles = () => {
     const searchInput = useSelector(selectUserInput);
     const articles_url = `https://gnews.io/api/v4/search?q=${searchInput}&token=cc9053584965ba9e9062087c7c0f4011&lang=en`
-    const worldArticles_url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/London`
+
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();
 
@@ -42,19 +39,17 @@ const Articles = () => {
                 dispatch(setBlogData(response.data));
                 setBlogs(response.data);
                 setLoading(false);
-                
+
             })
-            
+
             .catch((error) => {
                 console.log(error);
 
             });
-    },[searchInput]);
+    }, [searchInput]);
+
 
     return (
-
-
-
 
         <div className="blog-page">
 
@@ -64,7 +59,7 @@ const Articles = () => {
             <div className="blogs">
                 {blogs?.articles?.map((blog) => (
                     <a className="blog" target="_blank" rel="noreferrer" href={blog.url}>
-                        <img src={blog.image} />
+                        <img alt="Coeus News Portal" src={blog.image} />
                         <div>
                             <h3 className="sourceName">
                                 <span>{blog.source.name}</span>
@@ -72,26 +67,25 @@ const Articles = () => {
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
-                            <a href="#" className="">View</a>
 
                         </div>
-                        
+
                     </a>
                 ))}
 
-                {blogs?.totalArticles == 0 && (
+                {blogs?.totalArticles === 0 && (
                     <h1 className="no__blogs">
                         No blogs found 😵. Please try searching another key-word
                     </h1>
                 )}
 
             </div>
-            
+
         </div>
-        
+
     );
 
-    
+
 
 
 };

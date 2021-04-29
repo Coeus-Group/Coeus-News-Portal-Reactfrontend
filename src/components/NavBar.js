@@ -9,9 +9,10 @@ import {
     setInput,
     setSignedIn,
     setUserData,
-} from "../feature/userHandle";
+} from "../reducers/userHandle";
 
-const Navbar1 = () => {
+
+const NavBar = () => {
 
     const [inputValue, setInputValue] = useState();
     const isSignedIn = useSelector(selectSignedIn);
@@ -32,7 +33,7 @@ const Navbar1 = () => {
 
     return (
         <div className="navbar1">
-            <h1 className="navbar__header">Coeus News Portal 📰</h1>
+            <a id="navbar_header" href="http://localhost:3000/"><h1 className="navbar__header">Coeus News Portal 📰</h1></a>
             {isSignedIn && (
                 <div className="blog__search">
                     <input
@@ -76,8 +77,8 @@ const Navbar1 = () => {
 
         </div>
 
-        
+
     );
 };
 
-export default Navbar1;
+export default NavBar;

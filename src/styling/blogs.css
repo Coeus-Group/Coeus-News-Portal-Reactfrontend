@@ -91,113 +91,46 @@
 .blog > img:hover {
     transform: scale(0.9);
 }
+
+
   
-@media screen and (min-width :768px) and (max-width:1024px){
+@media screen and (width: 768px) {
     .blogs {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 50px;
-        padding: 40px 0;
+      width: 265%; /* The width is 100%, when the viewport is 800px or smaller */
+      
     }
 
-    .navbar__header {
-        font-size: 20px;
-        font-weight: 700;
-        margin-left: -69px;
+    .blog-page-header {
+        letter-spacing: 2px;
+        font-size: 62px;
+        text-align: center;
+        font-family: "Anonymous Pro";
+        font-weight: bold;
+        margin-block-start: 63px;
+        margin-inline-start: 864px;
     }
 
-    .logout__button {
-        margin-right: -64px;
-    }
 
-    .signedIn {
-        display: none;
-    }
 
-    .blog__search {
-        flex: 1 1;
-        width: 100%;
-        display: flex;
-        padding: 10px 0px;
-        margin: 0px 70px;
-        justify-content: space-between;
-        background: rgb(39, 39, 39);
-        border-radius: 5px;
-        margin-right: 7px;
-        margin-left: 23px;
-    }
 }
 
-@media screen and (min-width :375px) and (max-width:667px){
-
+@media screen and (width: 375px) {
+    
     .blogs {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 50px;
-        padding: 40px 0;
+        width: 265%; 
+      
     }
 
-    .navbar__header {
-        font-size: 20px;
-        font-weight: 700;
-        margin-left: -69px;
-        
-    }
+    .blog-page-header {
+        letter-spacing: 2px;
+        font-size: 62px;
+        text-align: center;
+        font-family: "Anonymous Pro";
+        font-weight: bold;
+        margin-block-start: 63px;
+        margin-inline-start: 864px;
+    }  
 
-    .logout__button {
-        margin-right: -64px;
-    }
-
-    .signedIn {
-        display: none;
-    }
-
-    .notSignedIn {
-        display: none;
-    }
-
-    .blog__search {
-        
-        justify-content: space-between;
-        background: rgb(39, 39, 39);
-        border-radius: 104px;
-        margin-block-start: 2px;
-        margin-left: -74px;
-        padding: 0px;
-    }
-
-    .submit {
-        width: 31%;
-    }
-
-    .navbar__user__data {
-        display: flex;
-        align-items: center;
-        margin-block-start: -60px;
-        margin-left: 152px;
-    }
-
-    .logout__button {
-        margin-left: 9px;
-        padding: 0px 27px;
-        border-radius: 25px;
-        border: none;
-        background: rgb(39, 39, 39);
-        font-family: "Inter";
-        color: white;
-        font-size: 10px;
-        font-weight: 500;
-        cursor: pointer;
-    }
 }
 
-@media screen and (min-width :414px) and (max-width:736px){
 
-    .navbar__user__data {
-        display: flex;
-        align-items: center;
-        margin-block-start: -57px;
-        margin-left: 190px;
-    }
-
-}
