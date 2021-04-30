@@ -28,7 +28,7 @@ darkmode.showWidget();
 const WorldNews = () => {
     let { id } = useParams();
     const newscategory = ['business', 'science', 'technology', 'entertainment', 'health', 'sports'];
-    // const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
+    const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
 
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     // const searchInput = useSelector(selectUserInput);
@@ -77,7 +77,7 @@ const WorldNews = () => {
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
                                 <p>{blog.article_location}</p>
-                                {blog.counter >= 10000 ? <p> :star2: </p> : ''}
+                                {blog.counter >= 10000 ? <h3 id="top-rated"> ⭐ </h3> : ''}
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
