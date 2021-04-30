@@ -41,6 +41,7 @@ const App = () => {
                       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                       <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
+                          <Nav.Link><Link to={"/Worldnews:National"}>National News</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:London"}>London</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Birmingham"}>Birmingham</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Liverpool"}>Liverpool</Link></Nav.Link>
