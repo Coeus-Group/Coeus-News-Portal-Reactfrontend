@@ -40,10 +40,11 @@ const WorldNews = () => {
 
     if (newscategory.includes(newsType)) {
         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getCategories/${newsType}`
-
-
-    } else {
+    } else if (locations.includes(newsType)) {
         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/${newsType}`
+    }
+    else {
+        url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getArticles`;
     }
 
     useEffect(() => {
@@ -76,7 +77,7 @@ const WorldNews = () => {
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
                                 <p>{blog.article_location}</p>
-                                {blog.counter >= 10000 ? <p> :star2: </p> : ‘’}
+                                {blog.counter >= 10000 ? <p> :star2: </p> : ''}
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
