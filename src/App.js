@@ -41,12 +41,13 @@ const App = () => {
                       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                       <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
+                          <Nav.Link><Link to={"/Worldnews:National"}>National</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:London"}>London</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Birmingham"}>Birmingham</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Liverpool"}>Liverpool</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Manchester"}>Manchester</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Oxford"}>Oxford</Link></Nav.Link>
-                          <Nav.Link><Link to={"/Worldnews:Cambridge"}>Cambridge</Link></Nav.Link>
+                          
                         </Nav>
                       </Navbar.Collapse>
                     </Navbar>

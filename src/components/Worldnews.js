@@ -28,7 +28,7 @@ darkmode.showWidget();
 const WorldNews = () => {
     let { id } = useParams();
     const newscategory = ['business', 'science', 'technology', 'entertainment', 'health', 'sports'];
-    // const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
+    const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
 
     let newsType = id.substring((id.indexOf(':') + 1), (id.length));
     // const searchInput = useSelector(selectUserInput);
@@ -40,10 +40,11 @@ const WorldNews = () => {
 
     if (newscategory.includes(newsType)) {
         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getCategories/${newsType}`
-
-
-    } else {
+    } else if (locations.includes(newsType)) {
         url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getLocations/${newsType}`
+    }
+    else {
+        url = `https://yy3p2v25vk.execute-api.eu-west-2.amazonaws.com/dev/getArticles`;
     }
 
     useEffect(() => {
@@ -73,9 +74,11 @@ const WorldNews = () => {
                     <a className="blog" target="_blank" rel="noreferrer" href={blog.article_URL}>
                         <img alt="Coeus News Portal" src={blog.article_image_URL} />
                         <div>
+                        {blog.counter >= 10000 ? <h3 id="top-rated"> ⭐ </h3> : ''}
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
                                 <p>{blog.article_location}</p>
+                                
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
