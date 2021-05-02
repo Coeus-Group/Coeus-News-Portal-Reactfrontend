@@ -43,7 +43,7 @@ const Articles = () => {
             })
 
             .catch((error) => {
-                console.log(error);
+                //console.log(error);
 
             });
     }, [searchInput]);
@@ -78,16 +78,9 @@ const Articles = () => {
                         No blogs found 😵. Please try searching another key-word
                     </h1>
                 )}
-
             </div>
-
         </div>
-
     );
-
-
-
-
 };
 
 export default Articles;

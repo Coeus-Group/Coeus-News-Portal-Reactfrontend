@@ -25,7 +25,7 @@ const options = {
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
 
-const WorldNews = () => {
+const Worldnews = () => {
     let { id } = useParams();
     const newscategory = ['business', 'science', 'technology', 'entertainment', 'health', 'sports'];
     const locations = ['London', 'Birmingham', 'Liverpool', 'Oxford', 'Cambrigde', 'Manchester'];
@@ -57,7 +57,7 @@ const WorldNews = () => {
             })
 
             .catch((error) => {
-                console.log(error);
+                //console.log(error);
 
             });
     }, [newsType]);
@@ -74,11 +74,11 @@ const WorldNews = () => {
                     <a className="blog" target="_blank" rel="noreferrer" href={blog.article_URL}>
                         <img alt="Coeus News Portal" src={blog.article_image_URL} />
                         <div>
-                        {blog.counter >= 10000 ? <h3 id="top-rated"> ⭐ </h3> : ''}
+                            {blog.counter >= 10000 ? <h3 id="top-rated"> ⭐ </h3> : ''}
                             <h3 className="sourceName">
                                 <span>{blog.author_name}</span>
                                 <p>{blog.article_location}</p>
-                                
+
                             </h3>
                             <h1>{blog.title}</h1>
                             <p>{blog.description}</p>
@@ -97,4 +97,4 @@ const WorldNews = () => {
     );
 };
 
-export default WorldNews;
+export default Worldnews;

@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import store from "./constants/store";
 
+//const store = createStore(reducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App /> 
+    <App />
   </Provider>,
   document.getElementById("root")
 );

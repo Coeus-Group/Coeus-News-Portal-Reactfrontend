@@ -1,14 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import LandingPage from "./components/LandingPage";
+import Landingpage from "./components/Landingpage";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { selectSignedIn } from "./reducers/userHandle";
 import NavBar from "./components/NavBar";
-import WorldNews from "./components/WorldNews";
+import Worldnews from "./components/Worldnews";
 import "./styling/app.css";
 import Articles from './components/Articles';
 import { Navbar, Nav } from "react-bootstrap";
+import { connect } from 'react-redux';
 
 const App = () => {
   const isSignedIn = useSelector(selectSignedIn)
@@ -47,25 +48,29 @@ const App = () => {
                           <Nav.Link><Link to={"/Worldnews:Liverpool"}>Liverpool</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Manchester"}>Manchester</Link></Nav.Link>
                           <Nav.Link><Link to={"/Worldnews:Oxford"}>Oxford</Link></Nav.Link>
-                          
+
                         </Nav>
                       </Navbar.Collapse>
                     </Navbar>
                   </div>
                 </div>
                 <Switch>
-                  <Route path="/:id" children={<WorldNews />} />
+                  <Route path="/:id" children={<Worldnews />} />
                 </Switch>
               </main>
             </Router>
           </div>
         </header>
       </Router>}
-      <LandingPage />
+      <Landingpage />
       {isSignedIn && <Articles />}
     </div>
   );
 };
 
+const mapStateToProps = state => {
+  return state
+}
 
-export default App;
+
+export default connect(mapStateToProps)(App);
