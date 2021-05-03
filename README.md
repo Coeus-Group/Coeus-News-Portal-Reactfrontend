@@ -35,6 +35,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+## Further Development :construction:
+
+-  Reporters - will be allowed to submit their stories (including words, images and video) using Create Articles page, along with relevant tags to provide a mechanism for ranking articles.
+- A reveiw section - Content moderators/approvers can verify article information and fact check it.
+- POST APIs to post the articles to database.
+- Dashboard page -All pending and approved articles will be rendered here.
+- CI/CD with Jenkins
+
 <!-- ### `npm run build`
 
 Builds the app for production to the `build` folder.\
