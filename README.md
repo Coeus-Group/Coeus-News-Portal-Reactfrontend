@@ -1,4 +1,8 @@
-# Coeus-News-Portal-Reactfrontend
+# Coeus News Portal Reactfrontend
+
+## The Task :briefcase:
+Find a way to promote / publish local news stories in the national online press so that your local community is represented in the news agenda and people in your area can stay informed in local events.
+
 
 # Getting Started with Create React App
 
