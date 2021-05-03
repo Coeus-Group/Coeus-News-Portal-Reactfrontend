@@ -27,6 +27,9 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## If successful you will see this page.
+![CoeusAppPage](./src/images/landingpage.PNG)
+
+__Once logged in__
 ![CoeusAppPage](./src/images/homepage.PNG)
 
 
