@@ -8,7 +8,10 @@ Find a way to promote / publish local news stories in the national online press 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-__How to install and use__
+## How to Install :computer:
+
+- To begin, clone the GitHub repository
+- Navigate into the Project file and run `npm install`
 
 ## Available Scripts
 
