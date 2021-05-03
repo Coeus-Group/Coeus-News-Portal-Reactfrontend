@@ -4,9 +4,18 @@
 Find a way to promote / publish local news stories in the national online press so that your local community is represented in the news agenda and people in your area can stay informed in local events.
 
 
-# Getting Started with Create React App
+__The Solution__
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- React App enables us to create interactive UIs. Design simple views for each state in your application.
+- The app provides multiple pages to view content based on categories like business, sports , tech etc.
+- It also provides content based on location which is crucial for publishing local news at national level.
+- We use API Gateway for API GET methods which in turn executes the AWS lambda functions for providing the JSON objects at the endpoints
+- These endpoints source data from the AWS MySQL RDS instance which source its data from external API’s.
+- The app achieves its objectives is through extracting top news based on each location, assigning a higher rank to such articles and allowing these to be accessed prior to other news articles.
+- The higher ranked articles are then rendered in the national new section
+
+
 
 ## How to Install :computer:
 
