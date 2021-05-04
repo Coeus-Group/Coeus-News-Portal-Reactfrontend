@@ -22,7 +22,7 @@ __The Solution__
 - To begin, clone the GitHub repository
 - Navigate into the Project file and run `npm install`
 - Then run `npm start`
-- j 
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
