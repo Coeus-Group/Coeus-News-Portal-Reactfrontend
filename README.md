@@ -1,27 +1,53 @@
-# Coeus-News-Portal-Reactfrontend
+# Coeus News Portal Reactfrontend
 
-# Getting Started with Create React App
+## The Task :briefcase:
+Find a way to promote / publish local news stories in the national online press so that your local community is represented in the news agenda and people in your area can stay informed in local events.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+__The Solution__
 
-In the project directory, you can run:
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- The React App enabled us to create interactive UIs. Design simple views for each state in your application.
+- The app provides multiple pages to view content based on categories like business, sports , tech etc.
+- It also provides content based on location which is crucial for publishing local news at national level.
+- We used API Gateway for API GET methods which in turn executes the AWS lambda functions for providing the JSON objects at the endpoints
+- These endpoints source data from the AWS RDS instance which collects the data from external API’s.
+- The app achieves its objectives through highlightig top news based on each location, assigning a higher rank to the articles thus allowing these to be accessed prior to other news articles.
+- The higher ranked articles are then rendered in the national new section
 
-### `npm start`
+
+
+## How to Install :computer:
+
+- To begin, clone the GitHub repository
+- Navigate into the Project file and run `npm install`
+- Then run `npm start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## If successful you will see this page.
+![CoeusAppPage](./src/images/landingpage.PNG)
+
+__Once logged in__
+![CoeusAppPage](./src/images/homepage.PNG)
+
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Further Development :construction:
+
+-  Reporters - will be allowed to submit their stories (including words, images and video) using Create Articles page, along with relevant tags to provide a mechanism for ranking articles.
+- A reveiw section - Content moderators/approvers can verify article information and fact check it.
+- POST APIs to post the articles to database.
+- Dashboard page -All pending and approved articles will be rendered here.
+- CI/CD with Jenkins
+
+<!-- ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -69,4 +95,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

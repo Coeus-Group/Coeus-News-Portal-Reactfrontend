@@ -45,7 +45,7 @@ const Articles = () => {
             .catch((error) => {
                 console.log(error);
 
-            });
+            });// eslint-disable-next-line
     }, [searchInput]);
 
 

@@ -56,7 +56,7 @@ const WorldNews = () => {
             .catch((error) => {
                 console.log(error);
 
-            });
+            });// eslint-disable-next-line
     }, [newsType]);
 
 
